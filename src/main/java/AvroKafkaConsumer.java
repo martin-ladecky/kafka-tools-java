@@ -89,7 +89,7 @@ public class AvroKafkaConsumer {
         if (groupId != null) {
             props.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         } else if (!props.containsKey(ConsumerConfig.GROUP_ID_CONFIG)) {
-            props.put(ConsumerConfig.GROUP_ID_CONFIG, "console-consumer-" + UUID.randomUUID().toString());
+            props.put(ConsumerConfig.GROUP_ID_CONFIG, "console-consumer-" + UUID.randomUUID());
         }
 
         if (ns.getBoolean("from_beginning")) {
